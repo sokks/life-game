@@ -1,0 +1,39 @@
+mpirun -n 1 bin/life_game_mpi 1000 1000 100
+
+Proc: 0
+Scene size: 1000 x 1000
+common: 40.8367
+io: 28.92
+exchange: 0.0415614
+compute: 11.8739
+round average: 0.117564
+
+
+mpirun -n 2 bin/life_game_mpi 1000 1000 100
+
+Proc: 0
+Scene size: 500 x 1000
+common: 28.2349
+io: 22.6161
+exchange: 0.142875
+compute: 5.47483
+round average: 0.0542062
+
+Proc: 1
+Scene size: 500 x 1000
+common: 28.2349
+io: 0
+exchange: 22.7519
+compute: 5.48235
+round average: 0.0542807
+
+
+mpirun -n 4 bin/life_game_mpi 1000 1000 100
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 4 slots
+that were requested by the application:
+  bin/life_game_mpi
+
+Either request fewer slots for your application, or make more slots available
+for use.
+--------------------------------------------------------------------------
